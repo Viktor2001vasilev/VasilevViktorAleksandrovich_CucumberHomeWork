@@ -16,22 +16,8 @@ import java.util.concurrent.TimeUnit;
 
 
 public class stepsWithAvito {
-    public ChromeDriver driver;
-    public WebDriverWait explicitWait;
-    @Before
-    public void setUp() {
-        System.setProperty("webdriver.chrome.driver", "src/resources/chromedriver.exe");
-        ChromeDriver driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-        driver.manage().window().maximize();
-        WebDriverWait explicitWait = new WebDriverWait(driver, 2);
-        this.driver = driver;
-        this.explicitWait = explicitWait;
-    }
-    @After
-    public void close() {
-        driver.quit();
-    }
+    public static ChromeDriver driver;
+    public static WebDriverWait explicitWait;
 
     @Пусть("открыт ресурс авито")
     public void openSite() {
