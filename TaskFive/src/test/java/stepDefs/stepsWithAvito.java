@@ -14,6 +14,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 
+
 public class stepsWithAvito {
     public ChromeDriver driver;
     public WebDriverWait explicitWait;
@@ -31,7 +32,6 @@ public class stepsWithAvito {
     public void close() {
         driver.quit();
     }
-
 
     @Пусть("открыт ресурс авито")
     public void openSite() {
